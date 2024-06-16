@@ -1,0 +1,62 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#header{
+	
+	background-color: blue;
+	height: 20rem;
+}
+
+.heading{
+	font-style: italic;
+	font-size: large;
+}
+
+
+.container{
+	background-image: url('image4.jpg');
+	background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            display: center;
+}
+
+button{
+	 margin-bottom: 10px; /* Add space between buttons */
+    padding: 15px 30px; /* Increase padding for larger buttons */
+    font-size: 10cm; /* Increase font size */
+    float: right;
+    
+}
+
+h1{
+text-align: center;	
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align buttons to the left */
+}
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    height: 100vh;
+}
+
+#heading{
+	font-size: 3cm;
+}
+
+a{
+	font-size: 3cm;
+	float:right;
+	margin:3cm;
+	text-decoration-color: blue;
+}

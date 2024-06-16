@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Total Expense for the Month</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] {
+            font-size: 1.2rem;
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        .result-container {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        p.result-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Total Expense for the Month</h1>
+        <form th:action="@{/totalExpenseMonth}" method="post">
+            <input type="text" placeholder="Enter month" name="month">
+            <br>
+            <input type="text" placeholder="Enter year" name="year">
+            <br><br>
+            <button type="submit">SUBMIT</button>
+            <div class="result-container">
+                <p class="result-label">Result</p>
+                <p th:text="${result}"></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

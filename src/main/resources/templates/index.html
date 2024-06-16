@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">	
+</head>
+<body>
+    <div class="homePage">
+        <div class="header">
+            <h1 id="heading">Personal Expense Tracker App</h1>
+        </div>
+        
+        <div class="container">
+            <a th:href="@{/loginD}" class="button">LOGIN</a>
+            <a th:href="@{/signup}" class="button">SIGNUP</a>
+        </div>
+    </div>
+</body>
+</html>

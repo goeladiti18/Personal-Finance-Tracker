@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn Page</title>
+    <style>
+		body{background-image: url('image 6.jpg');
+			background-size: cover;
+            background-repeat: no-repeat;
+            
+            
+            
+            text-align: center;
+		}
+	</style>
+     
+</head>
+<body >
+    <h1>Log In Please</h1>
+    <h2 th:text="${successMessage}"></h2><br><br><br>
+    <form th:action="@{/FinanceAppMainPage}" th:object="${loginData}" method="post">
+        
+        <input style="font-size: xx-large;" type="text" placeholder="Enter your username" name="userName">
+        <br><br><br>
+        
+        <input style="font-size: xx-large;" type="password" placeholder="Enter your password" name="password" >
+        <br><br><br><br>
+        <button type="submit">SUBMIT</button>
+    </form>
+   
+</body>
+</html>
